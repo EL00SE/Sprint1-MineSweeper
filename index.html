@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body onload="init()">
+    <video autoplay muted loop id="myVideo">
+        <source src="images/BGC.mp4" type="video/mp4">
+    </video>
+    <p class="my-title neon-text">💣MineSweeper💣</p>
+    <button id="smileyBtn" onClick="clickSmiley()">😀</button>
+    <p class="neon-text" id="liveBox"></p>
+    <p class="neon-text" id="timer"></p>
+    <!-- <p class="neon-text" id="highScore"></p> -->
+    <div id="noContextMenu" class="board-container center"></div>
+    <button class="diff-btn neon-text" id="beginnerBtn" onClick="setBeginner()">beginner</button>
+    <button class="diff-btn neon-text" id="intermediateBtn" onClick="setIntermediate()">Intermediate</button>
+    <button class="diff-btn neon-text" id="expertBtn" onClick="setExpert()">Expert</button>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
