@@ -109,13 +109,13 @@ function cellMarked(elCell, i, j) {
         return;
     if (gBoard[i][j].isMarked) {
         gBoard[i][j].isMarked = false;
-        gBoard[i][j].isShown = false;
+        console.log(gBoard[i][j].isMarked)
         elCell.innerText = '';
         gGame.markedCount--;
 
     } else {
         gBoard[i][j].isMarked = true;
-        gBoard[i][j].isShown = true;
+        console.log(gBoard[i][j].isMarked)
         elCell.innerText = FLAG;
         gGame.markedCount++
     }
@@ -153,8 +153,7 @@ function cellClicked(elCell, i, j) {
             gBoard[i][j].isShown = true;
             gGame.shownCount++;
             elCell.classList.add("shown");
-        }
-        else if (gBoard[i][j].minesAroundCount === 0) {
+        } else if (gBoard[i][j].minesAroundCount === 0) {
             expandShown(gBoard, elCell, i, j);
         }
 
@@ -298,7 +297,7 @@ function setLives(count) {
 }
 
 function setTimer() {
-    var x = setInterval(function () {
+    var x = setInterval(function() {
         if (!gGame.isOn) clearInterval(x);
         document.getElementById("timer").innerText = gGame.secsPassed++;
 
